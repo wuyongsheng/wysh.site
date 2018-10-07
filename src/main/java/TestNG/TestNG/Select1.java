@@ -44,6 +44,7 @@ public class Select1 {
 		Thread.sleep(2000);
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
+		System.out.println("name: "+name+" is loggin!");
 		driver.findElement(By.xpath("//*[@id=\"userNav\"]/li/a/span[2]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id=\"userNav\"]/li/ul/li[13]/a")).click();
@@ -54,6 +55,8 @@ public class Select1 {
 	  public Object[][] dp() {
 	    return new Object[][] {
 	      new Object[] { "admin", "Aa1234" },
+	      new Object[] { "zhangsan","Bb1234"},
+	      new Object[] { "admin", "Aa134" },
 	      new Object[] { "zhangsan","Bb1234"},
 	    };
 	  }
