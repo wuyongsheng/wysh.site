@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="42945" started-at="2018-10-07T16:08:49Z" finished-at="2018-10-07T16:09:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="42945" started-at="2018-10-07T16:08:49Z" finished-at="2018-10-07T16:09:32Z">
+      <class name="TestNG.TestNG.Select1">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:TestNG.TestNG.Select1@6950e31]" name="setUp" is-config="true" duration-ms="3985" started-at="2018-10-07T16:08:49Z" finished-at="2018-10-07T16:08:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testUntitled(java.lang.String, java.lang.String)[pri:0, instance:TestNG.TestNG.Select1@6950e31]" name="testUntitled" duration-ms="10422" started-at="2018-10-07T16:08:53Z" data-provider="dp" finished-at="2018-10-07T16:09:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Aa1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestNG.TestNG.Select1@6950e31]" name="tearDown" is-config="true" duration-ms="4983" started-at="2018-10-07T16:09:03Z" finished-at="2018-10-07T16:09:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:TestNG.TestNG.Select1@6950e31]" name="setUp" is-config="true" duration-ms="2784" started-at="2018-10-07T16:09:08Z" finished-at="2018-10-07T16:09:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testUntitled(java.lang.String, java.lang.String)[pri:0, instance:TestNG.TestNG.Select1@6950e31]" name="testUntitled" duration-ms="16271" started-at="2018-10-07T16:09:11Z" data-provider="dp" finished-at="2018-10-07T16:09:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[zhangsan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Bb1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestNG.TestNG.Select1@6950e31]" name="tearDown" is-config="true" duration-ms="4401" started-at="2018-10-07T16:09:27Z" finished-at="2018-10-07T16:09:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestNG.TestNG.Select1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
