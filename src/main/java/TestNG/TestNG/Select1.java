@@ -9,12 +9,14 @@ import org.testng.annotations.BeforeClass;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
@@ -41,23 +43,51 @@ public class Select1 {
 		driver.findElement(By.id("account")).sendKeys(name);
 		driver.findElement(By.name("password")).sendKeys(password);
 		driver.findElement(By.id("submit")).click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		driver.manage().window().maximize();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		System.out.println("name: "+name+" is loggin!");
-		driver.findElement(By.xpath("//*[@id=\"userNav\"]/li/a/span[2]")).click();
 		Thread.sleep(2000);
+		
+		try {
+			driver.switchTo().alert().accept();;
+			System.out.println("loggin failed !");
+			System.out.println(driver.getTitle());
+			Assert.assertTrue(false);
+		}
+	     
+		catch(Exception e) {	
+			Assert.assertTrue(true);
+			System.out.println("loggin sccess !");
+			System.out.println(driver.getTitle());
+		}
+		
+		driver.findElement(By.xpath("//*[@id=\"userNav\"]/li/a/span[2]")).click();
+		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@id=\"userNav\"]/li/ul/li[13]/a")).click();
 	
+	}
+	public Boolean  alert() {
+		try {
+			driver.switchTo().alert();
+			System.out.println("loggin failed !");
+			 return false;
+		}
+	     
+		catch(Exception e) {
+	    	 return true;
+	    	 
+		}
+		
 	}
 	
 	 @DataProvider
 	  public Object[][] dp() {
-	    return new Object[][] {
-	      new Object[] { "admin", "Aa1234" },
-	      new Object[] { "zhangsan","Bb1234"},
-	      new Object[] { "admin", "Aa134" },
-	      new Object[] { "zhangsan","Bb1234"},
+	    return new Object[][] {    
+	      new Object[] { "admin", "Aa134" }, //错误的用户名 密码
+	      new Object[] { "zhangsan","Bb1234"}, // 正确的用户名 密码
+	      new Object[] { "zhangsan","Bb12345"}, // 错误的用户名 密码
+	      new Object[] { "admin", "Aa1234" },  // 正确的用户名 密码
 	    };
 	  }
 
