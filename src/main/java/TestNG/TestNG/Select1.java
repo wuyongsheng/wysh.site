@@ -84,9 +84,9 @@ public class Select1 {
 	 @DataProvider
 	  public Object[][] dp() {
 	    return new Object[][] {    
-	    //  new Object[] { "admin", "Aa134" }, //错误的用户名 密码
+	     new Object[] { "admin", "Aa134" }, //错误的用户名 密码
 	      new Object[] { "zhangsan","Bb1234"}, // 正确的用户名 密码
-	     // new Object[] { "zhangsan","Bb12345"}, // 错误的用户名 密码
+	     new Object[] { "zhangsan","Bb12345"}, // 错误的用户名 密码
 	      new Object[] { "admin", "Aa1234" },  // 正确的用户名 密码
 	    };
 	  }
